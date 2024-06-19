@@ -3,7 +3,6 @@ import Tweet from "./Tweet";
 import TweetInput from "./TweetInput";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "@/firebase";
-import Link from "next/link";
 
 export default function PostFeed() {
   const [tweets, setTweets] = useState([]);
@@ -25,14 +24,8 @@ export default function PostFeed() {
       <TweetInput />
 
       {tweets.map((tweet) => {
-        return (
-          <Link key={tweet.id} href={tweet.id}>
-            <Tweet data={tweet.data()} id={tweet.id} /> 
-          </Link>
-        );
+        return <Tweet key={tweet.id} data={tweet.data()} id={tweet.id} />;
       })}
-
-      <Tweet />
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/outline";
 import Modal from "@mui/material/Modal";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -17,9 +18,10 @@ export default function commentModal() {
   const isOpen = useSelector((state) => state.modals.CommentModalOpen);
   const userImg = useSelector((state) => state.user.photoUrl);
   const dispath = useDispatch();
-  const tweetDetails = useSelector(state => state.modals.commentTweetDetails);
-  const user = useSelector(state => state.user);
+  const tweetDetails = useSelector((state) => state.modals.commentTweetDetails);
+  const user = useSelector((state) => state.user);
   const [comment, setComment] = useState("");
+  const router = useRouter();
 
   async function sendComment() {
     const docRef = doc(db, "posts", tweetDetails.id);
@@ -27,11 +29,14 @@ export default function commentModal() {
       username: user.username,
       name: user.name,
       photoUrl: user.photoUrl,
-      comment: comment
+      comment: comment,
     };
     await updateDoc(docRef, {
-      comments: arrayUnion(commentDetails)
+      comments: arrayUnion(commentDetails),
     });
+
+    dispath(closeCommentModal());
+    router.push("/" + tweetDetails.id);
   }
 
   return (
@@ -82,7 +87,7 @@ export default function commentModal() {
                 <textarea
                   className="w-full bg-transparent resize-none"
                   placeholder="Tweet your reply"
-                  onChange={e => setComment(e.target.value)}
+                  onChange={(e) => setComment(e.target.value)}
                 />
 
                 <div className="flex justify-between border-t border-gray-700 pt-4">
