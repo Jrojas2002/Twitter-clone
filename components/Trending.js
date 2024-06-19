@@ -19,33 +19,33 @@ export default function Trending() {
         <h1 className="font-bold text-xl p-3">What's Happening</h1>
         <div className="p-3 relative">
           <DotsHorizontalIcon className="w-5 text-gray-600 absolute right-4" />
-          <p className="text-xs text-gray-500">Trending in US</p>
-          <h1 className="text-[15px] font-bold">China</h1>
-          <p className="text-xs text-gray-500">340k Tweets</p>
+          <p className="text-xs text-gray-500">Trending</p>
+          <h1 className="text-[15px] font-bold">Sports</h1>
+          <p className="text-xs text-gray-500">10k Tweets</p>
         </div>
         <div className="p-3 relative">
           <DotsHorizontalIcon className="w-5 text-gray-600 absolute right-4" />
           <p className="text-xs text-gray-500">Trending in US</p>
-          <h1 className="text-[15px] font-bold">China</h1>
-          <p className="text-xs text-gray-500">340k Tweets</p>
+          <h1 className="text-[15px] font-bold">Breaking News</h1>
+          <p className="text-xs text-gray-500">40k Tweets</p>
         </div>
         <div className="p-3 relative">
           <DotsHorizontalIcon className="w-5 text-gray-600 absolute right-4" />
           <p className="text-xs text-gray-500">Trending in US</p>
-          <h1 className="text-[15px] font-bold">China</h1>
+          <h1 className="text-[15px] font-bold">WHATS HAPPENNING</h1>
           <p className="text-xs text-gray-500">340k Tweets</p>
         </div>
         <div className="p-3 relative">
           <DotsHorizontalIcon className="w-5 text-gray-600 absolute right-4" />
-          <p className="text-xs text-gray-500">Trending in US</p>
-          <h1 className="text-[15px] font-bold">China</h1>
-          <p className="text-xs text-gray-500">340k Tweets</p>
+          <p className="text-xs text-gray-500">Trending</p>
+          <h1 className="text-[15px] font-bold">World Cup</h1>
+          <p className="text-xs text-gray-500">50k Tweets</p>
         </div>
         <div className="p-3 relative">
           <DotsHorizontalIcon className="w-5 text-gray-600 absolute right-4" />
           <p className="text-xs text-gray-500">Trending in US</p>
-          <h1 className="text-[15px] font-bold">China</h1>
-          <p className="text-xs text-gray-500">340k Tweets</p>
+          <h1 className="text-[15px] font-bold">Tesla</h1>
+          <p className="text-xs text-gray-500">30k Tweets</p>
         </div>
       </div>
       <div className="w-[300px] h-[300px] bg-white bg-opacity-10 rounded-3xl mt-3">
@@ -54,14 +54,14 @@ export default function Trending() {
           <div className="flex space-x-3">
             <img
               className="w-11 h-11 object-cover rounded-full"
-              src="/assets/bragg.png"
+              src="/assets/pfp.png"
             />
             <div>
               <div className="flex space-x-1">
-                <h1 className="font-bold">David Bragg</h1>
+                <h1 className="font-bold">Elon Musk</h1>
                 <BadgeCheckIcon className="w-[18px] text-blue-400" />
               </div>
-              <h1 className="text-[12px] text-gray-500 mt-1">@davidbragg</h1>
+              <h1 className="text-[12px] text-gray-500 mt-1">@elon</h1>
             </div>
           </div>
           <button className="bg-white text-black text-sm w-20 rounded-3xl font-bold h-8">
@@ -72,14 +72,14 @@ export default function Trending() {
           <div className="flex space-x-3">
             <img
               className="w-11 h-11 object-cover rounded-full"
-              src="/assets/bragg.png"
+              src="/assets/kylie.png"
             />
             <div>
               <div className="flex space-x-1">
-                <h1 className="font-bold">David Bragg</h1>
+                <h1 className="font-bold">Kylie Jenner</h1>
                 <BadgeCheckIcon className="w-[18px] text-blue-400" />
               </div>
-              <h1 className="text-[12px] text-gray-500 mt-1">@davidbragg</h1>
+              <h1 className="text-[12px] text-gray-500 mt-1">@kylie</h1>
             </div>
           </div>
           <button className="bg-white text-black text-sm w-20 rounded-3xl font-bold h-8">
