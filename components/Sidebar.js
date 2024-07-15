@@ -14,6 +14,7 @@ import {
 } from "@heroicons/react/outline";
 import { signOut } from "firebase/auth";
 import Image from "next/image";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Sidebar() {
@@ -34,7 +35,9 @@ export default function Sidebar() {
         <div className="flex justify-center xl:justify-start items-center py-3 xl:p-3">
           <Image src={"/assets/twitter-logo.png"} width={34} height={34} />
         </div>
+        <Link href={"/"}>
         <SidebarLink Icon={HomeIcon} text={"Home"} />
+        </Link>
         <SidebarLink Icon={HashtagIcon} text={"Explore"} />
         <SidebarLink Icon={BellIcon} text={"Notifications"} />
         <SidebarLink Icon={InboxIcon} text={"Messages"} />
